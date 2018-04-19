@@ -58,6 +58,7 @@ function drawPayTable(payInfo) {
 }
 
 $('#btnCalc').click(function() {
+  options.socialInsuranceBase = +$('#socialInsuranceBase').val();
   calculator.setOptions(options);
   var result = calculator.calcSocialInsurancePays();
   drawPayTable(result);
