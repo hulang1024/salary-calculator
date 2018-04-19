@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>五险一金及税后计算器</title>
+  </head>
+  <body>
+    <div>
+      税前工资：¥<input id="originSalary" type="text">
+      <button id="btnCalc">计算</button>
+      
+      <h2>选项：</h2>
+      <div>
+        <table id="table1" border="1">
+        </table>
+        <h3>其它选项：</h3>
+        社保汇缴基数：¥<input id="socialInsuranceBase" type="text">
+      </div>
+      
+      <h2>计算结果：</h2>
+      <div>
+        税后工资：¥<input id="finalSalary" type="text">
+
+        
+        <div>
+          <table id="table2" border="1">
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="http://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <script src="SalaryCalculator.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
