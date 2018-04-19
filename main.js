@@ -32,31 +32,31 @@ function initSOAPRTable() {
   var table = $('#table1');
   var html = '<tr>'
     + '<th>社保类型</th>'
-    + '<th>单位承担比例</th>'
-    + '<th>个人承担比例</th></tr>';
+    + '<th>个人承担比例</th>'
+    + '<th>单位承担比例</th></tr>';
 
   var ratios = options.socialInsuranceOrgAndPersonalRatios;
   for (var type in ratios) {
     html += '<tr>'
       + '<td>' + typeTitles[type] + '</td>'
-      + '<td>' + (ratios[type].org * 100).toFixed(2) + '%' + '</td>'
-      + '<td>' + (ratios[type].personal * 100).toFixed(2) + '%' + '</td></tr>';
+      + '<td>' + (ratios[type].personal * 100).toFixed(2) + '%' + '</td>'
+      + '<td>' + (ratios[type].org * 100).toFixed(2) + '%' + '</td></tr>';
   }
   html += '<tr>'
     + '<td>' + '保险金总计' + '</td>'
-    + '<td>' + (calculator.calcSocialInsuranceRatioSums().org * 100).toFixed(2) + '%' + '</td>'
-    + '<td>' + (calculator.calcSocialInsuranceRatioSums().personal * 100).toFixed(2) + '%' + '</td></tr>';
+    + '<td>' + (calculator.calcSocialInsuranceRatioSums().personal * 100).toFixed(2) + '%' + '</td>'
+    + '<td>' + (calculator.calcSocialInsuranceRatioSums().org * 100).toFixed(2) + '%' + '</td></tr>';
 
   html += '<tr>'
     + '<th>公积金</th>'
-    + '<th>单位承担比例</th>'
-    + '<th>个人承担比例</th></tr>';
+    + '<th>个人承担比例</th>'
+    + '<th>单位承担比例</th></tr>';
 
   var ratios = options.housingAccFundOrgAndPersonalRatios;
   html += '<tr>'
     + '<td>公积金</td>'
-    + '<td>' + (ratios.org * 100).toFixed(2) + '%' + '</td>'
-    + '<td>' + (ratios.personal * 100).toFixed(2) + '%' + '</td></tr>';
+    + '<td>' + (ratios.personal * 100).toFixed(2) + '%' + '</td>'
+    + '<td>' + (ratios.org * 100).toFixed(2) + '%' + '</td></tr>';
 
   table.append(html);
 }
@@ -65,30 +65,30 @@ function drawPayTable(payInfo) {
   var table = $('#table2');
   var html = '<tr>'
     + '<th>社保类型</th>'
-    + '<th>单位应缴</th>'
-    + '<th>个人应缴</th></tr>';
+    + '<th>个人应缴</th>'
+    + '<th>单位应缴</th></tr>';
 
   for (var type in payInfo.socialInsurance.items) {
     html += '<tr>'
       + '<td>' + typeTitles[type] + '</td>'
-      + '<td>' + payInfo.socialInsurance.items[type].org.toFixed(2) + '</td>'
-      + '<td>' + payInfo.socialInsurance.items[type].personal.toFixed(2) + '</td></tr>';
+      + '<td>' + payInfo.socialInsurance.items[type].personal.toFixed(2) + '</td>'
+      + '<td>' + payInfo.socialInsurance.items[type].org.toFixed(2) + '</td></tr>';
   }
 
   html += '<tr>'
     + '<td>保险金总计</td>'
-    + '<td>' + payInfo.socialInsurance.sums.org.toFixed(2) + '</td>'
-    + '<td>' + payInfo.socialInsurance.sums.personal.toFixed(2) + '</td></tr>';
+    + '<td>' + payInfo.socialInsurance.sums.personal.toFixed(2) + '</td>'
+    + '<td>' + payInfo.socialInsurance.sums.org.toFixed(2) + '</td></tr>';
 
   html += '<tr>'
     + '<th>公积金</th>'
-    + '<th>单位应缴</th>'
-    + '<th>个人应缴</th></tr>';
+    + '<th>个人应缴</th>'
+    + '<th>单位应缴</th></tr>';
 
   html += '<tr>'
     + '<td>公积金</td>'
-    + '<td>' + payInfo.housingAccFund.org.toFixed(2) + '</td>'
-    + '<td>' + payInfo.housingAccFund.personal.toFixed(2) + '</td></tr>';
+    + '<td>' + payInfo.housingAccFund.personal.toFixed(2) + '</td>'
+    + '<td>' + payInfo.housingAccFund.org.toFixed(2) + '</td></tr>';
   table.html(html);
 }
 
