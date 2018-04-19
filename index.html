@@ -3,29 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title>五险一金及税后计算器</title>
+
+    <link type="text/css" rel="stylesheet"  href="style.css" />
   </head>
   <body>
     <div>
-      税前工资：¥<input id="originSalary" type="text">
-      <button id="btnCalc">计算</button>
-      
-      <h2>选项：</h2>
-      <div>
-        <table id="table1" border="1">
-        </table>
-        <h3>其它选项：</h3>
+      <div id="inputs">
+        税前工资：¥<input id="originSalary" type="text">
+        <table id="table1"></table>
         社保缴费基数：¥<input id="socialInsuranceBase" type="text">
+        <br>
+        公积金缴费基数：¥<input id="housingAccFundBase" type="text">
+        <br>
+        <label for="personalHousingAccFundNotPay">个人不缴公积金：</label>
+        <input id="personalHousingAccFundNotPay" type="checkbox">
+        <br>
+        <button id="btnCalc">计算</button>
       </div>
-      
-      <h2>计算结果：</h2>
-      <div>
-        税后工资：¥<input id="finalSalary" type="text">
 
-        
+      <div id="result">
+        <h2>计算结果：</h2>
         <div>
-          <table id="table2" border="1">
-          </table>
+          <table id="table2"></table>
         </div>
+        税后工资：¥<span id="finalSalary"></span>
       </div>
     </div>
 

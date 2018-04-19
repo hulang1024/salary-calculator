@@ -1,0 +1,15 @@
+
+#inputs {
+  width: 50%;
+  float: left;
+}
+
+#result {
+  width: 50%;
+  float: left;
+}
+
+#btnCalc {
+  width: 100px;
+  height: 30px;
+}
