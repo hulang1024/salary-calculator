@@ -9,7 +9,7 @@ table {
   text-align: center;
 }
 th {
-  background: #6da56c;
+
 }
 caption {
   font-weight: bold;
@@ -26,6 +26,8 @@ caption {
 
 .number-table td, th {
   border: 1px solid;
+  border-left: none;
+  border-right: none;
 }
 
 #table1 {
