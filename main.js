@@ -35,6 +35,10 @@ function initSOAPRTable() {
     + '<th>个人承担比例</th>'
     + '<th>单位承担比例</th></tr>';
 
+  function editaleCell() {
+    return '<td><input value' + typeTitles[type] + '</td>'
+  }
+
   var ratios = options.socialInsuranceOrgAndPersonalRatios;
   for (var type in ratios) {
     html += '<tr>'
@@ -63,7 +67,9 @@ function initSOAPRTable() {
 
 function drawPayTable(payInfo) {
   var table = $('#table2');
-  var html = '<tr>'
+  var html =
+      '<caption>计算结果</caption>'
+    + '<tr>'
     + '<th>社保类型</th>'
     + '<th>个人应缴</th>'
     + '<th>单位应缴</th></tr>';
@@ -101,7 +107,9 @@ $('#btnCalc').click(function() {
 
   calculator.setOptions(options);
   var result = calculator.calcPays();
+  $('#result').hide();
   drawPayTable(result);
+  $('#result').fadeIn();
 
   var originSalary = + $('#originSalary').val();
   var finalSalary = calculator.calcPersonalFinalSalary(originSalary);

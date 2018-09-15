@@ -9,32 +9,32 @@
   <body>
     <div>
       <div id="inputs">
-        税前工资：¥<input id="originSalary" type="text">
-        <table id="table1"></table>
-        社保缴费基数：¥<input id="socialInsuranceBase" type="text">
-        <br>
-        公积金缴费基数：¥<input id="housingAccFundBase" type="text">
-        <br>
-        <label for="personalHousingAccFundNotPay">个人不缴公积金：</label>
-        <input id="personalHousingAccFundNotPay" type="checkbox">
-        <br>
+        <div>税前工资：<input id="originSalary"  class="numberbox" type="text">元</div>
+        <table id="table1" class="number-table"></table>
+        <table class="base-inputs">
+          <tr>
+            <td>社保缴费基数：</td>
+            <td><input id="socialInsuranceBase" class="numberbox" type="text">元</td>
+          </tr>
+          <tr>
+            <td>公积金缴费基数：</td>
+            <td><input id="housingAccFundBase"  class="numberbox" type="text">元</td>
+          </tr>
+          <tr>
+            <td><label for="personalHousingAccFundNotPay">个人不缴公积金：</label></td>
+            <td><input id="personalHousingAccFundNotPay" type="checkbox"></td>
+          </tr>
+        </table>
         <button id="btnCalc">计算</button>
       </div>
 
       <div id="result">
-        <h2>计算结果：</h2>
-        <div>
-          <table id="table2"></table>
-        </div>
-        <br>
-        税后工资：¥<span id="finalSalary"></span>
+        <table id="table2" class="number-table"></table>
+        <div>税后工资：<span id="finalSalary">0.00</span>元</div>
       </div>
     </div>
 
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
+    <script src="jquery-3.1.1.min.js"></script>
     <script src="SalaryCalculator.js"></script>
     <script src="main.js"></script>
   </body>

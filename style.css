@@ -1,15 +1,65 @@
+body {
+  font-family: Verdana;
+  background: #88ce88;
+  color: #222;
+}
+
+table {
+  border-collapse: collapse;
+  text-align: center;
+}
+th {
+  background: #6da56c;
+}
+caption {
+  font-weight: bold;
+  border-top: 1px solid;
+}
+
+.numberbox {
+  width: 70px;
+  padding-left: 4px;
+  border: 0px;
+  border-radius: 2px;
+  font-size: 1em;
+}
+
+.number-table td, th {
+  border: 1px solid;
+}
+
+#table1 {
+  margin: 10px 0px 5px 0px;
+}
+#table1 td {
+    width: 120px;
+}
+
+#table2 td {
+    width: 120px;
+}
 
 #inputs {
-  width: 50%;
-  float: left;
+  width: 370px;
+  margin: 0 auto;
 }
 
 #result {
-  width: 50%;
-  float: left;
+  width: 370px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.base-inputs td {
+  text-align: left;
 }
 
 #btnCalc {
   width: 100px;
   height: 30px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 4px;
+  outline: none;
+  font-size: 1em;
 }
